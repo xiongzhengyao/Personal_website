@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <h1 data-en="Welcome to My Personal Page" data-cn="熊正耀的个人博客">Xiongzhengyao's Blog</h1>
+        <button onclick="switchLanguage('en')">English</button>
+        <button onclick="switchLanguage('cn')">中文</button>
+    </header>
+    <main>
+        <section>
+            <h2 data-en="About Me" data-cn="关于我">About Me</h2>
+            <div class="avatar-container">
+                <img src="{{ url_for('static', filename='images/avatar.jpg') }}" alt="My Avatar" class="avatar">
+            </div>
+            <p data-en="Hello! I'm Xiongzhengyao, a mobile camera driver developer. I specialize in developing and optimizing camera drivers for mobile devices, ensuring high performance and quality imaging. I am passionate about technology and enjoy solving complex problems in the field of mobile photography."
+               data-cn="你好！我是熊正耀，一名手机相机驱动开发人员。我专注于开发和优化移动设备的相机驱动程序，确保高性能和高质量的成像。我对技术充满热情，喜欢解决移动摄影领域的复杂问题。">
+               Hello! I'm Xiongzhengyao, a mobile camera driver developer. I specialize in developing and optimizing camera drivers for mobile devices, ensuring high performance and quality imaging. I am passionate about technology and enjoy solving complex problems in the field of mobile photography.
+            </p>
+        </section>
+        <section>
+            <h2 data-en="Basic Information" data-cn="基本信息">Basic Information</h2>
+            <ul>
+                <li><strong data-en="Name:" data-cn="姓名：">Name:</strong> <span data-en="Xiongzhengyao" data-cn="熊正耀">Xiongzhengyao</span></li>
+                <li><strong data-en="Location:" data-cn="位置：">Location:</strong> <span data-en="Shanghai" data-cn="上海">Shanghai</span></li>
+                <li><strong data-en="Email:" data-cn="电子邮件：">Email:</strong> xiongzhenyao163@163.com</li>
+            </ul>
+        </section>
+        <section>
+            <h2 data-en="Skills" data-cn="技能">Skills</h2>
+            <ul>
+                <li data-en="Camera Driver Development" data-cn="相机驱动开发">Camera Driver Development</li>
+                <li data-en="Embedded Systems" data-cn="嵌入式系统">Embedded Systems</li>
+                <li data-en="Image Processing" data-cn="图像处理">Image Processing</li>
+                <li data-en="Python, C/C++" data-cn="Python, C/C++">Python, C/C++</li>
+            </ul>
+        </section>
+        <section>
+            <h2 data-en="Education" data-cn="教育背景">Education</h2>
+            <ul>
+                <li><strong data-en="Degree:" data-cn="学位：">Degree:</strong> Master of Science</li>
+                <li><strong data-en="University:" data-cn="大学：">University:</strong> Shanghai University</li>
+                <li><strong data-en="Year:" data-cn="年份：">Year:</strong> June 2022</li>
+            </ul>
+        </section>
+        <section>
+            <h2 data-en="Work Experience" data-cn="工作经历">Work Experience</h2>
+            <ul>
+                <li><strong data-en="Position:" data-cn="职位：">Position:</strong> Mobile Camera Driver Developer</li>
+                <li><strong data-en="Company:" data-cn="公司：">Company:</strong> Beijing Xiaomi Mobile Software Co., Ltd. Shanghai Branch</li>
+                <li><strong data-en="Duration:" data-cn="时间：">Duration:</strong> August 2022 - Present</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html> 
