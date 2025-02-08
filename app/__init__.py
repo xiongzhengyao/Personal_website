@@ -1,10 +1,18 @@
-from flask import Flask
+from flask import Flask, render_template
 
 def create_app():
     app = Flask(__name__)
 
-    with app.app_context():
-        # Import parts of our application
-        from . import routes
+    @app.route('/')
+    def landing():
+        return render_template('landing.html')
 
-        return app 
+    @app.route('/resume')
+    def resume():
+        return render_template('index.html')
+
+    return app
+
+if __name__ == '__main__':
+    app = create_app()
+    app.run(debug=True) 

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='landing.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li class="dropdown">
+                <a href="#about" data-en="About" data-cn="关于">About</a>
+                <div class="dropdown-content">
+                    <a href="/resume" data-en="Resume" data-cn="简历">Resume</a>
+                </div>
+            </li>
+            <li><a href="#info" data-en="Info" data-cn="信息">Info</a></li>
+            <li><a href="#tags" data-en="Tags" data-cn="标签">Tags</a></li>
+            <li><a href="#timeline" data-en="Timeline" data-cn="时间线">Timeline</a></li>
+        </ul>
+        <div class="language-switch">
+            <a href="#" onclick="switchLanguage('en')">English</a> | 
+            <a href="#" onclick="switchLanguage('cn')">中文</a>
+        </div>
+    </nav>
+    <div class="info-box" id="info">
+        <p style="text-align: left;"><span>📍</span> <span data-en="China-Shanghai" data-cn="中国-上海">China-Shanghai</span></p>
+        <p style="text-align: left;"><span>🏫</span> <span data-en="Shanghai University" data-cn="上海大学">Shanghai University</span></p>
+    </div>
+    <div class="tags" id="tags">
+        <span data-en="Internet Addiction" data-cn="网瘾">Internet Addiction</span>
+        <span data-en="Primary School Student" data-cn="小学生">Primary School Student</span>
+        <span data-en="Freshman" data-cn="大一">Freshman</span>
+        <span data-en="Web" data-cn="网页">Web</span>
+        <span data-en="Linux" data-cn="Linux">Linux</span>
+        <span data-en="Blind" data-cn="瞎者">Blind</span>
+        <span data-en="Frontend" data-cn="前端">Frontend</span>
+        <span data-en="Cycling" data-cn="骑行">Cycling</span>
+    </div>
+    <div class="timeline" id="timeline">
+        <p data-en="Stay Tuned 2024.1" data-cn="敬请期待 2024.1">Stay Tuned 2024.1</p>
+        <p data-en="ICP Filing Success 2023.8" data-cn="ICP备案成功 2023.8">ICP Filing Success 2023.8</p>
+        <p data-en="Domain Registered zyyo.net 2023.3" data-cn="注册域名zyyo.net 2023.3">Domain Registered zyyo.net 2023.3</p>
+        <p data-en="Reformed 2021.2" data-cn="出来后洗心革面 2021.2">Reformed 2021.2</p>
+    </div>
+</body>
+</html>

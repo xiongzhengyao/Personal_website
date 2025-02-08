@@ -1,10 +1,33 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    position: relative;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f5;
-    color: #333333;
-    line-height: 1.6;
+    overflow: hidden;
+    font-family: 'Lora', serif;
+    background: url('path/to/your/image.jpg') no-repeat center center fixed; /* Add your image path */
+    background-size: cover;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(224, 247, 250, 0.8); /* Light blue with transparency */
+    backdrop-filter: blur(10px); /* Apply Gaussian blur */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    z-index: -1; /* Ensure it is behind the content */
+}
+
+main, header {
+    position: relative;
+    z-index: 1; /* Ensure content is above the blurred background */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for content background */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 header {
@@ -92,4 +115,40 @@ button:hover {
 button:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.5);
+}
+
+.info-box, .tags, .timeline {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-box p, .tags span, .timeline p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.tags span {
+    display: inline-block;
+    background-color: #007aff;
+    color: white;
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.timeline p {
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline p::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #007aff;
 } 
